@@ -10,6 +10,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: dart-lang/setup-dart@v1
       - name: Install dependencies
+        working-directory: ./screenme
         run: dart pub get
       - uses: actions/setup-java@v1
         with:
