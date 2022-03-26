@@ -13,8 +13,10 @@ jobs:
           java-version: '12.x'
       - uses: subosito/flutter-action@v1
       - name: 'Run flutter pub get'
+        working-directory: ./screenme
         run: flutter pub get
       - name: 'Build Web App'
+        working-directory: ./screenme
         run: flutter build web
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
