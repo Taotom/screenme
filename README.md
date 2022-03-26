@@ -2,7 +2,7 @@
 
 𝐒𝐜𝐫𝐞𝐞𝐧𝐌𝐄 is an 𝐀𝐈 𝐩𝐫𝐨𝐣𝐞𝐜𝐭 🤖 allowing each doctor to automatically identify the right clinical trials for their patients and the eligible patients to their clinical studies. Doing so, we make it easy for every professionals and indivudals to take part into a great cause : our Health.
 
-## What is the problem you're trying to solve?
+# What is the problem you're trying to solve?
 👉 𝟖 𝐜𝐥𝐢𝐧𝐢𝐜𝐚𝐥 𝐬𝐭𝐮𝐝𝐢𝐞𝐬 𝐨𝐯𝐞𝐫 𝟏𝟎 suffer from important delays (on average 90% longer than expected) due to difficulties in finding eligible patients.
 As a matter of fact 𝐨𝐧𝐥𝐲 𝟎.𝟐% 𝐨𝐟 𝐩𝐚𝐭𝐢𝐞𝐧𝐭𝐬 𝐞𝐥𝐢𝐠𝐢𝐛𝐥𝐞 𝐟𝐨𝐫 𝐚 𝐜𝐥𝐢𝐧𝐢𝐜𝐚𝐥 𝐭𝐫𝐢𝐚𝐥 𝐚𝐫𝐞 𝐢𝐝𝐞𝐧𝐭𝐢𝐟𝐢𝐞𝐝 𝐚𝐬 𝐬𝐮𝐜𝐡 by their doctor, due to a lack of adequate tools.
 
@@ -18,7 +18,7 @@ To sum up :
 
 At 𝐒𝐜𝐫𝐞𝐞𝐧𝐌𝐄, we use deeptech to empower anyone to commit for everyone's health 💪
 
-## How do you plan to solve it?
+# How do you plan to solve it?
 Our app enables doctors to automatically match patients and clinical trials with each other by using an AI model capable of cross-referencing trials criteria with patients data.
 
 🤝 With 𝐒𝐜𝐫𝐞𝐞𝐧𝐌𝐄, no more patients are left behind : everyone benefits from the same chances of being treated the right way.
@@ -26,8 +26,8 @@ Our app enables doctors to automatically match patients and clinical trials with
 ⏰At 𝐒𝐜𝐫𝐞𝐞𝐧𝐌𝐄, we believe patients have no time to waste so we provide innovations in no time.
 
 🦸 With 𝐒𝐜𝐫𝐞𝐞𝐧𝐌𝐄, You too can be a hero.
-Lien vers plus d'informations
-https://www.linkedin.com/company/screen-me/
-Site web - ScreenME - la recherche à portée de clic
 
-ScreenME: https://screenme-65ada.web.app
+# Lien vers plus d'informations
+- https://www.linkedin.com/company/screen-me/
+- https://screenme-65ada.web.app
+Site web - ScreenME - la recherche à portée de clic
