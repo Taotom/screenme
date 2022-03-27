@@ -86,7 +86,7 @@ class _EtudeWidgetState extends State<EtudeWidget> {
                             child: Align(
                               alignment: AlignmentDirectional(0, 0),
                               child: Text(
-                                'AcSé Pembrolizumab - NCT234',
+                                'HESPER-HEALTH',
                                 style: FlutterFlowTheme.of(context)
                                     .bodyText1
                                     .override(
@@ -102,13 +102,30 @@ class _EtudeWidgetState extends State<EtudeWidget> {
                           padding: EdgeInsetsDirectional.fromSTEB(0, 25, 0, 0),
                           child: Container(
                             width: MediaQuery.of(context).size.width * 0.8,
-                            height: MediaQuery.of(context).size.height * 0.2,
+                            height: MediaQuery.of(context).size.height * 0.25,
                             decoration: BoxDecoration(
                               color: Color(0xFFFAFAFA),
                               borderRadius: BorderRadius.circular(30),
                               border: Border.all(
                                 color: Color(0xFF222222),
                                 width: 1,
+                              ),
+                            ),
+                            child: Align(
+                              alignment: AlignmentDirectional(0, 0),
+                              child: Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    10, 10, 10, 10),
+                                child: Text(
+                                  'Les jus de fruits ne fournissent pas seulement des sucres et des calories connexes, mais ils sont de riches sources de composés bioactifs, en particulier de flavonoïdes. Les flavanones constituent une classe de flavonoïdes que l’on trouve spécifiquement et abondamment dans les agrumes, l’hespéridine étant le composé majeur de l’orange. D’après des études de cohorte prospectives, des apports plus élevés de flavanones sont associés à une incidence plus faible de mortalité par maladie cardiovasculaire (MCV).',
+                                  textAlign: TextAlign.justify,
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyText1
+                                      .override(
+                                        fontFamily: 'Poppins',
+                                        fontSize: 10,
+                                      ),
+                                ),
                               ),
                             ),
                           ),
@@ -164,7 +181,7 @@ class _EtudeWidgetState extends State<EtudeWidget> {
                                               alignment:
                                                   AlignmentDirectional(0, 0),
                                               child: Text(
-                                                'Age > 18 Y',
+                                                'Homme',
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyText1
@@ -200,7 +217,7 @@ class _EtudeWidgetState extends State<EtudeWidget> {
                                               alignment:
                                                   AlignmentDirectional(0, 0),
                                               child: Text(
-                                                'GFR > 50mi/min',
+                                                '40-65 ans',
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyText1
@@ -236,7 +253,7 @@ class _EtudeWidgetState extends State<EtudeWidget> {
                                               alignment:
                                                   AlignmentDirectional(0, 0),
                                               child: Text(
-                                                'SS number',
+                                                'IMC < ou = 30',
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyText1
@@ -272,7 +289,7 @@ class _EtudeWidgetState extends State<EtudeWidget> {
                                               alignment:
                                                   AlignmentDirectional(0, 0),
                                               child: Text(
-                                                'Measurable disease',
+                                                'Poids > 46 kg',
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyText1
@@ -309,7 +326,8 @@ class _EtudeWidgetState extends State<EtudeWidget> {
                                               alignment:
                                                   AlignmentDirectional(0, 0),
                                               child: Text(
-                                                'ECOG < 1',
+                                                'Pas de patologie digestive',
+                                                textAlign: TextAlign.center,
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyText1
@@ -317,6 +335,7 @@ class _EtudeWidgetState extends State<EtudeWidget> {
                                                           fontFamily: 'Poppins',
                                                           color:
                                                               Color(0xFFFAFAFA),
+                                                          fontSize: 12,
                                                         ),
                                               ),
                                             ),
@@ -336,7 +355,7 @@ class _EtudeWidgetState extends State<EtudeWidget> {
                                                     .height *
                                                 0.05,
                                             decoration: BoxDecoration(
-                                              color: Color(0xFFE83818),
+                                              color: Color(0xFF6DAD5C),
                                               borderRadius:
                                                   BorderRadius.circular(30),
                                               shape: BoxShape.rectangle,
@@ -345,7 +364,7 @@ class _EtudeWidgetState extends State<EtudeWidget> {
                                               alignment:
                                                   AlignmentDirectional(0, 0),
                                               child: Text(
-                                                'RT within 21 D',
+                                                'Pas de tabac',
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyText1
@@ -386,115 +405,8 @@ class _EtudeWidgetState extends State<EtudeWidget> {
                                               alignment:
                                                   AlignmentDirectional(0, 0),
                                               child: Text(
-                                                'Sexe: F',
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyText1
-                                                        .override(
-                                                          fontFamily: 'Poppins',
-                                                          color:
-                                                              Color(0xFFFAFAFA),
-                                                        ),
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                        Padding(
-                                          padding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  0, 5, 0, 0),
-                                          child: Container(
-                                            width: MediaQuery.of(context)
-                                                    .size
-                                                    .width *
-                                                0.35,
-                                            height: MediaQuery.of(context)
-                                                    .size
-                                                    .height *
-                                                0.05,
-                                            decoration: BoxDecoration(
-                                              color: Color(0xFF6DAD5C),
-                                              borderRadius:
-                                                  BorderRadius.circular(30),
-                                              shape: BoxShape.rectangle,
-                                            ),
-                                            child: Align(
-                                              alignment:
-                                                  AlignmentDirectional(0, 0),
-                                              child: Text(
-                                                'Biopsy available',
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyText1
-                                                        .override(
-                                                          fontFamily: 'Poppins',
-                                                          color:
-                                                              Color(0xFFFAFAFA),
-                                                        ),
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                        Padding(
-                                          padding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  0, 5, 0, 0),
-                                          child: Container(
-                                            width: MediaQuery.of(context)
-                                                    .size
-                                                    .width *
-                                                0.35,
-                                            height: MediaQuery.of(context)
-                                                    .size
-                                                    .height *
-                                                0.05,
-                                            decoration: BoxDecoration(
-                                              color: Color(0xFF6DAD5C),
-                                              borderRadius:
-                                                  BorderRadius.circular(30),
-                                              shape: BoxShape.rectangle,
-                                            ),
-                                            child: Align(
-                                              alignment:
-                                                  AlignmentDirectional(0, 0),
-                                              child: Text(
-                                                'PNN > 300/mm³',
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyText1
-                                                        .override(
-                                                          fontFamily: 'Poppins',
-                                                          color:
-                                                              Color(0xFFFAFAFA),
-                                                        ),
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                        Padding(
-                                          padding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  0, 5, 0, 0),
-                                          child: Container(
-                                            width: MediaQuery.of(context)
-                                                    .size
-                                                    .width *
-                                                0.35,
-                                            height: MediaQuery.of(context)
-                                                    .size
-                                                    .height *
-                                                0.05,
-                                            decoration: BoxDecoration(
-                                              color: Color(0xFF6DAD5C),
-                                              borderRadius:
-                                                  BorderRadius.circular(30),
-                                              shape: BoxShape.rectangle,
-                                            ),
-                                            child: Align(
-                                              alignment:
-                                                  AlignmentDirectional(0, 0),
-                                              child: Text(
-                                                'Metastatic disease',
+                                                'Pas d\'intolérance\nau citron',
+                                                textAlign: TextAlign.center,
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyText1
@@ -522,7 +434,7 @@ class _EtudeWidgetState extends State<EtudeWidget> {
                                                     .height *
                                                 0.05,
                                             decoration: BoxDecoration(
-                                              color: Color(0xFFE83818),
+                                              color: Color(0xFF6DAD5C),
                                               borderRadius:
                                                   BorderRadius.circular(30),
                                               shape: BoxShape.rectangle,
@@ -531,7 +443,83 @@ class _EtudeWidgetState extends State<EtudeWidget> {
                                               alignment:
                                                   AlignmentDirectional(0, 0),
                                               child: Text(
-                                                'Prior anti PD1/PDL1',
+                                                'Absence de diabète',
+                                                textAlign: TextAlign.center,
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyText1
+                                                        .override(
+                                                          fontFamily: 'Poppins',
+                                                          color:
+                                                              Color(0xFFFAFAFA),
+                                                        ),
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  0, 5, 0, 0),
+                                          child: Container(
+                                            width: MediaQuery.of(context)
+                                                    .size
+                                                    .width *
+                                                0.35,
+                                            height: MediaQuery.of(context)
+                                                    .size
+                                                    .height *
+                                                0.05,
+                                            decoration: BoxDecoration(
+                                              color: Color(0xFF6DAD5C),
+                                              borderRadius:
+                                                  BorderRadius.circular(30),
+                                              shape: BoxShape.rectangle,
+                                            ),
+                                            child: Align(
+                                              alignment:
+                                                  AlignmentDirectional(0, 0),
+                                              child: Text(
+                                                'Tour de taille\n>= 94 si H',
+                                                textAlign: TextAlign.center,
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyText1
+                                                        .override(
+                                                          fontFamily: 'Poppins',
+                                                          color:
+                                                              Color(0xFFFAFAFA),
+                                                          fontSize: 14,
+                                                        ),
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  0, 5, 0, 0),
+                                          child: Container(
+                                            width: MediaQuery.of(context)
+                                                    .size
+                                                    .width *
+                                                0.35,
+                                            height: MediaQuery.of(context)
+                                                    .size
+                                                    .height *
+                                                0.05,
+                                            decoration: BoxDecoration(
+                                              color: Color(0xFF6DAD5C),
+                                              borderRadius:
+                                                  BorderRadius.circular(30),
+                                              shape: BoxShape.rectangle,
+                                            ),
+                                            child: Align(
+                                              alignment:
+                                                  AlignmentDirectional(0, 0),
+                                              child: Text(
+                                                'Absence d\'hypertension',
+                                                textAlign: TextAlign.center,
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyText1
@@ -559,7 +547,7 @@ class _EtudeWidgetState extends State<EtudeWidget> {
                                                     .height *
                                                 0.05,
                                             decoration: BoxDecoration(
-                                              color: Color(0xFFE83818),
+                                              color: Color(0xFF6DAD5C),
                                               borderRadius:
                                                   BorderRadius.circular(30),
                                               shape: BoxShape.rectangle,
@@ -568,7 +556,7 @@ class _EtudeWidgetState extends State<EtudeWidget> {
                                               alignment:
                                                   AlignmentDirectional(0, 0),
                                               child: Text(
-                                                'Active infection',
+                                                'Non végétarien',
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyText1
@@ -576,8 +564,30 @@ class _EtudeWidgetState extends State<EtudeWidget> {
                                                           fontFamily: 'Poppins',
                                                           color:
                                                               Color(0xFFFAFAFA),
+                                                          fontSize: 14,
                                                         ),
                                               ),
+                                            ),
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  0, 5, 0, 0),
+                                          child: Container(
+                                            width: MediaQuery.of(context)
+                                                    .size
+                                                    .width *
+                                                0.35,
+                                            height: MediaQuery.of(context)
+                                                    .size
+                                                    .height *
+                                                0.05,
+                                            decoration: BoxDecoration(
+                                              color: Color(0xFFA3A3A3),
+                                              borderRadius:
+                                                  BorderRadius.circular(30),
+                                              shape: BoxShape.rectangle,
                                             ),
                                           ),
                                         ),
@@ -602,39 +612,61 @@ class _EtudeWidgetState extends State<EtudeWidget> {
                               children: [
                                 Align(
                                   alignment: AlignmentDirectional(0, 0),
-                                  child: InkWell(
-                                    onTap: () async {
-                                      await Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                          builder: (context) =>
-                                              SearchpaWidget(),
-                                        ),
-                                      );
-                                    },
-                                    child: LinearPercentIndicator(
-                                        percent: 0.2,
-                                        width:
-                                            MediaQuery.of(context).size.width *
-                                                0.8,
-                                        lineHeight: 40,
-                                        animation: true,
-                                        progressColor: Color(0xFFE18B2D),
-                                        backgroundColor: Color(0xFFFAFAFA),
-                                        center: Text(
-                                          'Objectif d\'inclusion: 15 patients',
-                                          textAlign: TextAlign.center,
-                                          style: FlutterFlowTheme.of(context)
-                                              .bodyText1
-                                              .override(
-                                                fontFamily: 'Poppins',
-                                                color: Color(0xFF222222),
-                                              ),
-                                        ),
-                                        barRadius: Radius.circular(30)),
-                                  ),
+                                  child: LinearPercentIndicator(
+                                      percent: 0.2,
+                                      width: MediaQuery.of(context).size.width *
+                                          0.8,
+                                      lineHeight: 40,
+                                      animation: true,
+                                      progressColor: Color(0xFFE18B2D),
+                                      backgroundColor: Color(0xFFFAFAFA),
+                                      center: Text(
+                                        'Objectif d\'inclusion: 15 patients',
+                                        textAlign: TextAlign.center,
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyText1
+                                            .override(
+                                              fontFamily: 'Poppins',
+                                              color: Color(0xFF222222),
+                                            ),
+                                      ),
+                                      barRadius: Radius.circular(30)),
                                 ),
                               ],
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(0, 25, 0, 0),
+                          child: InkWell(
+                            onTap: () async {
+                              await Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => SearchpaWidget(),
+                                ),
+                              );
+                            },
+                            child: Container(
+                              width: MediaQuery.of(context).size.width * 0.35,
+                              height: MediaQuery.of(context).size.height * 0.08,
+                              decoration: BoxDecoration(
+                                color: Color(0xFF0A094E),
+                                borderRadius: BorderRadius.circular(30),
+                              ),
+                              child: Align(
+                                alignment: AlignmentDirectional(0, 0),
+                                child: Text(
+                                  'Recherher des patients',
+                                  textAlign: TextAlign.center,
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyText1
+                                      .override(
+                                        fontFamily: 'Poppins',
+                                        color: Color(0xFFFAFAFA),
+                                      ),
+                                ),
+                              ),
                             ),
                           ),
                         ),

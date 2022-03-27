@@ -172,7 +172,7 @@ class _SearchecWidgetState extends State<SearchecWidget> {
                               child: Align(
                                 alignment: AlignmentDirectional(0, 0),
                                 child: Text(
-                                  'AcSé Pembrolizumab - NCT234',
+                                  'HESPER-HEALTH',
                                   style: FlutterFlowTheme.of(context)
                                       .bodyText1
                                       .override(

@@ -27,7 +27,7 @@ class _DashBoardWidgetState extends State<DashBoardWidget> {
       start: DateTime.now().startOfDay,
       end: DateTime.now().endOfDay,
     );
-    textController = TextEditingController();
+    textController = TextEditingController(text: 'HESPER-HEALTH');
   }
 
   @override
@@ -166,7 +166,7 @@ class _DashBoardWidgetState extends State<DashBoardWidget> {
                           padding: EdgeInsetsDirectional.fromSTEB(0, 25, 0, 0),
                           child: Container(
                             width: MediaQuery.of(context).size.width * 0.8,
-                            height: MediaQuery.of(context).size.height * 0.15,
+                            height: MediaQuery.of(context).size.height * 0.2,
                             decoration: BoxDecoration(
                               color: Color(0xFFEEEEEE),
                             ),
