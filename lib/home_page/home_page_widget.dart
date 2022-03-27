@@ -1,3 +1,4 @@
+import '../dash/dash_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
@@ -29,18 +30,28 @@ class _HomePageWidgetState extends State<HomePageWidget> {
       appBar: AppBar(
         backgroundColor: Color(0xFF0A094E),
         automaticallyImplyLeading: false,
-        leading: Container(
-          width: 100,
-          height: 100,
-          decoration: BoxDecoration(
-            color: Color(0xFFEEEEEE),
-            image: DecorationImage(
-              fit: BoxFit.cover,
-              image: Image.asset(
-                'assets/images/ScreenME.png',
-              ).image,
+        leading: InkWell(
+          onTap: () async {
+            await Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => DashWidget(),
+              ),
+            );
+          },
+          child: Container(
+            width: 100,
+            height: 100,
+            decoration: BoxDecoration(
+              color: Color(0xFFEEEEEE),
+              image: DecorationImage(
+                fit: BoxFit.cover,
+                image: Image.asset(
+                  'assets/images/ScreenME.png',
+                ).image,
+              ),
+              shape: BoxShape.circle,
             ),
-            shape: BoxShape.circle,
           ),
         ),
         title: Text(
