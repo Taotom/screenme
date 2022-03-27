@@ -1,8 +1,7 @@
-import '../dash/dash_widget.dart';
+import '../dash_board/dash_board_widget.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
-import '../result/result_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -14,870 +13,205 @@ class HomePageWidget extends StatefulWidget {
 }
 
 class _HomePageWidgetState extends State<HomePageWidget> {
-  TextEditingController textController;
+  TextEditingController textController1;
+  TextEditingController textController2;
+  bool passwordVisibility;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    textController = TextEditingController();
+    textController1 = TextEditingController();
+    textController2 = TextEditingController();
+    passwordVisibility = false;
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      appBar: AppBar(
-        backgroundColor: Color(0xFF0A094E),
-        automaticallyImplyLeading: false,
-        leading: InkWell(
-          onTap: () async {
-            await Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => DashWidget(),
-              ),
-            );
-          },
-          child: Container(
-            width: 100,
-            height: 100,
-            decoration: BoxDecoration(
-              color: Color(0xFFEEEEEE),
-              image: DecorationImage(
-                fit: BoxFit.cover,
-                image: Image.asset(
-                  'assets/images/ScreenME.png',
-                ).image,
-              ),
-              shape: BoxShape.circle,
+      appBar: PreferredSize(
+        preferredSize:
+            Size.fromHeight(MediaQuery.of(context).size.height * 0.1),
+        child: AppBar(
+          backgroundColor: Color(0xFF0A094E),
+          automaticallyImplyLeading: false,
+          flexibleSpace: Align(
+            alignment: AlignmentDirectional(0, 0),
+            child: Text(
+              'ScreenME',
+              textAlign: TextAlign.center,
+              style: FlutterFlowTheme.of(context).title1.override(
+                    fontFamily: 'Poppins',
+                    color: Color(0xFFFAFAFA),
+                    fontWeight: FontWeight.bold,
+                  ),
             ),
           ),
+          actions: [],
+          elevation: 2,
         ),
-        title: Text(
-          'ScreenMe',
-          textAlign: TextAlign.start,
-          style: FlutterFlowTheme.of(context).title2.override(
-                fontFamily: 'Poppins',
-                color: Colors.white,
-                fontSize: 44,
-              ),
-        ),
-        actions: [],
-        centerTitle: false,
-        elevation: 0,
       ),
-      backgroundColor: Color(0xFF0A094E),
+      backgroundColor: Color(0xFFFAFAFA),
       body: SafeArea(
         child: GestureDetector(
           onTap: () => FocusScope.of(context).unfocus(),
-          child: Stack(
-            children: [
-              Stack(
+          child: Align(
+            alignment: AlignmentDirectional(0, -0.55),
+            child: Container(
+              width: MediaQuery.of(context).size.width * 0.8,
+              decoration: BoxDecoration(
+                color: Color(0xFFE7E5E5),
+                borderRadius: BorderRadius.circular(25),
+              ),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Stack(
-                    children: [
-                      Stack(
-                        children: [
-                          Stack(
-                            children: [
-                              Stack(
-                                children: [
-                                  Stack(
-                                    children: [
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            35, 15, 0, 0),
-                                        child: Container(
-                                          width: MediaQuery.of(context)
-                                                  .size
-                                                  .width *
-                                              0.6,
-                                          height: MediaQuery.of(context)
-                                                  .size
-                                                  .height *
-                                              0.05,
-                                          decoration: BoxDecoration(
-                                            color: Colors.white,
-                                            borderRadius:
-                                                BorderRadius.circular(16),
-                                          ),
-                                          alignment: AlignmentDirectional(0, 0),
-                                          child: Row(
-                                            mainAxisSize: MainAxisSize.max,
-                                            children: [
-                                              Expanded(
-                                                child: Padding(
-                                                  padding: EdgeInsetsDirectional
-                                                      .fromSTEB(4, 0, 4, 0),
-                                                  child: TextFormField(
-                                                    controller: textController,
-                                                    obscureText: false,
-                                                    decoration: InputDecoration(
-                                                      labelText:
-                                                          'Search here...',
-                                                      labelStyle:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .bodyText1
-                                                              .override(
-                                                                fontFamily:
-                                                                    'Lexend Deca',
-                                                                color: Color(
-                                                                    0xFF57636C),
-                                                                fontSize: 14,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .normal,
-                                                              ),
-                                                      enabledBorder:
-                                                          OutlineInputBorder(
-                                                        borderSide: BorderSide(
-                                                          color:
-                                                              Color(0x00000000),
-                                                          width: 0,
-                                                        ),
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(8),
-                                                      ),
-                                                      focusedBorder:
-                                                          OutlineInputBorder(
-                                                        borderSide: BorderSide(
-                                                          color:
-                                                              Color(0x00000000),
-                                                          width: 0,
-                                                        ),
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(8),
-                                                      ),
-                                                    ),
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .bodyText1
-                                                        .override(
-                                                          fontFamily:
-                                                              'Lexend Deca',
-                                                          color:
-                                                              Color(0xFF262D34),
-                                                          fontSize: 14,
-                                                          fontWeight:
-                                                              FontWeight.normal,
-                                                        ),
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                      ),
-                                      Align(
-                                        alignment:
-                                            AlignmentDirectional(-0.85, -0.75),
-                                        child: Padding(
-                                          padding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  25, 0, 0, 0),
-                                          child: FFButtonWidget(
-                                            onPressed: () {
-                                              print('Button pressed ...');
-                                            },
-                                            text: 'Tri Pertinence',
-                                            options: FFButtonOptions(
-                                              width: 200,
-                                              height: 50,
-                                              color: Color(0xFFE5090F),
-                                              textStyle:
-                                                  FlutterFlowTheme.of(context)
-                                                      .bodyText1
-                                                      .override(
-                                                        fontFamily:
-                                                            'Lexend Deca',
-                                                        color: Colors.white,
-                                                        fontSize: 14,
-                                                        fontWeight:
-                                                            FontWeight.normal,
-                                                      ),
-                                              elevation: 2,
-                                              borderSide: BorderSide(
-                                                color: Colors.transparent,
-                                                width: 1,
-                                              ),
-                                              borderRadius: 40,
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                      Align(
-                                        alignment: AlignmentDirectional(0, 0),
-                                        child: Padding(
-                                          padding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  0, 150, 0, 0),
-                                          child: Container(
-                                            width: MediaQuery.of(context)
-                                                .size
-                                                .width,
-                                            height: MediaQuery.of(context)
-                                                    .size
-                                                    .height *
-                                                1,
-                                            decoration: BoxDecoration(
-                                              color: Color(0xFFEEEEEE),
-                                              borderRadius:
-                                                  BorderRadius.circular(40),
-                                            ),
-                                            child: Stack(
-                                              children: [
-                                                Align(
-                                                  alignment:
-                                                      AlignmentDirectional(
-                                                          0, -1),
-                                                  child: Padding(
-                                                    padding:
-                                                        EdgeInsetsDirectional
-                                                            .fromSTEB(
-                                                                0, 10, 0, 0),
-                                                    child: Text(
-                                                      'Mes patients éligibles ',
-                                                      textAlign:
-                                                          TextAlign.center,
-                                                      style:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .bodyText1,
-                                                    ),
-                                                  ),
-                                                ),
-                                                Align(
-                                                  alignment:
-                                                      AlignmentDirectional(
-                                                          0, -0.75),
-                                                  child: Container(
-                                                    width:
-                                                        MediaQuery.of(context)
-                                                                .size
-                                                                .width *
-                                                            0.8,
-                                                    height:
-                                                        MediaQuery.of(context)
-                                                                .size
-                                                                .height *
-                                                            0.08,
-                                                    decoration: BoxDecoration(
-                                                      color: Color(0xFF311B92),
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              40),
-                                                    ),
-                                                  ),
-                                                ),
-                                                Align(
-                                                  alignment:
-                                                      AlignmentDirectional(
-                                                          0, -0.75),
-                                                  child: Container(
-                                                    width:
-                                                        MediaQuery.of(context)
-                                                                .size
-                                                                .width *
-                                                            0.8,
-                                                    height:
-                                                        MediaQuery.of(context)
-                                                                .size
-                                                                .height *
-                                                            0.08,
-                                                    decoration: BoxDecoration(
-                                                      color: Color(0xFF311B92),
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              40),
-                                                    ),
-                                                  ),
-                                                ),
-                                                Align(
-                                                  alignment:
-                                                      AlignmentDirectional(
-                                                          0, -0.75),
-                                                  child: Container(
-                                                    width:
-                                                        MediaQuery.of(context)
-                                                                .size
-                                                                .width *
-                                                            0.9,
-                                                    height:
-                                                        MediaQuery.of(context)
-                                                                .size
-                                                                .height *
-                                                            0.08,
-                                                    decoration: BoxDecoration(
-                                                      color: Color(0xFF311B92),
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              40),
-                                                    ),
-                                                    child: Stack(
-                                                      children: [
-                                                        Align(
-                                                          alignment:
-                                                              AlignmentDirectional(
-                                                                  -0.8, 0.05),
-                                                          child: Text(
-                                                            'IPP : 798675809807',
-                                                            style: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .bodyText1
-                                                                .override(
-                                                                  fontFamily:
-                                                                      'Poppins',
-                                                                  color: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .primaryBtnText,
-                                                                ),
-                                                          ),
-                                                        ),
-                                                        Align(
-                                                          alignment:
-                                                              AlignmentDirectional(
-                                                                  0.8, 0),
-                                                          child: Container(
-                                                            width: MediaQuery.of(
-                                                                        context)
-                                                                    .size
-                                                                    .width *
-                                                                0.1,
-                                                            height: MediaQuery.of(
-                                                                        context)
-                                                                    .size
-                                                                    .width *
-                                                                0.1,
-                                                            decoration:
-                                                                BoxDecoration(
-                                                              color: Color(
-                                                                  0xFF2E7D32),
-                                                              shape: BoxShape
-                                                                  .circle,
-                                                            ),
-                                                            child: Padding(
-                                                              padding:
-                                                                  EdgeInsetsDirectional
-                                                                      .fromSTEB(
-                                                                          10,
-                                                                          9,
-                                                                          10,
-                                                                          10),
-                                                              child: Text(
-                                                                '99%',
-                                                                textAlign:
-                                                                    TextAlign
-                                                                        .center,
-                                                                style: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .bodyText1,
-                                                              ),
-                                                            ),
-                                                          ),
-                                                        ),
-                                                      ],
-                                                    ),
-                                                  ),
-                                                ),
-                                                Stack(
-                                                  children: [
-                                                    Stack(
-                                                      children: [
-                                                        Stack(
-                                                          children: [
-                                                            Stack(
-                                                              children: [
-                                                                Stack(
-                                                                  children: [
-                                                                    Align(
-                                                                      alignment:
-                                                                          AlignmentDirectional(
-                                                                              0,
-                                                                              0),
-                                                                      child:
-                                                                          Stack(
-                                                                        children: [
-                                                                          Align(
-                                                                            alignment:
-                                                                                AlignmentDirectional(0, 0),
-                                                                            child:
-                                                                                Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(0, 150, 0, 0),
-                                                                              child: Container(
-                                                                                width: MediaQuery.of(context).size.width,
-                                                                                height: MediaQuery.of(context).size.height * 1,
-                                                                                decoration: BoxDecoration(
-                                                                                  color: Color(0xFFEEEEEE),
-                                                                                  borderRadius: BorderRadius.circular(40),
-                                                                                ),
-                                                                                child: Stack(
-                                                                                  children: [
-                                                                                    Align(
-                                                                                      alignment: AlignmentDirectional(0, -1),
-                                                                                      child: Container(
-                                                                                        width: MediaQuery.of(context).size.width * 0.9,
-                                                                                        height: MediaQuery.of(context).size.height * 0.08,
-                                                                                        decoration: BoxDecoration(
-                                                                                          color: Color(0xFF311B92),
-                                                                                          borderRadius: BorderRadius.circular(40),
-                                                                                        ),
-                                                                                        child: Align(
-                                                                                          alignment: AlignmentDirectional(-0.05, 0.45),
-                                                                                          child: Padding(
-                                                                                            padding: EdgeInsetsDirectional.fromSTEB(10, 10, 10, 10),
-                                                                                            child: Stack(
-                                                                                              children: [
-                                                                                                Align(
-                                                                                                  alignment: AlignmentDirectional(-0.8, 0.05),
-                                                                                                  child: Text(
-                                                                                                    'IPP : 97879669868',
-                                                                                                    style: FlutterFlowTheme.of(context).bodyText1.override(
-                                                                                                          fontFamily: 'Poppins',
-                                                                                                          color: FlutterFlowTheme.of(context).primaryBtnText,
-                                                                                                        ),
-                                                                                                  ),
-                                                                                                ),
-                                                                                                Align(
-                                                                                                  alignment: AlignmentDirectional(0.85, 0),
-                                                                                                  child: Container(
-                                                                                                    width: MediaQuery.of(context).size.width * 0.1,
-                                                                                                    height: MediaQuery.of(context).size.width * 0.1,
-                                                                                                    decoration: BoxDecoration(
-                                                                                                      color: Color(0xFF2E7D32),
-                                                                                                      shape: BoxShape.circle,
-                                                                                                    ),
-                                                                                                    child: Padding(
-                                                                                                      padding: EdgeInsetsDirectional.fromSTEB(10, 9, 10, 10),
-                                                                                                      child: Text(
-                                                                                                        '99%',
-                                                                                                        textAlign: TextAlign.center,
-                                                                                                        style: FlutterFlowTheme.of(context).bodyText1,
-                                                                                                      ),
-                                                                                                    ),
-                                                                                                  ),
-                                                                                                ),
-                                                                                              ],
-                                                                                            ),
-                                                                                          ),
-                                                                                        ),
-                                                                                      ),
-                                                                                    ),
-                                                                                    Align(
-                                                                                      alignment: AlignmentDirectional(0, -0.6),
-                                                                                      child: Container(
-                                                                                        width: MediaQuery.of(context).size.width * 0.9,
-                                                                                        height: MediaQuery.of(context).size.height * 0.08,
-                                                                                        decoration: BoxDecoration(
-                                                                                          color: Color(0xFF311B92),
-                                                                                          borderRadius: BorderRadius.circular(40),
-                                                                                        ),
-                                                                                        child: Align(
-                                                                                          alignment: AlignmentDirectional(0, 0),
-                                                                                          child: Stack(
-                                                                                            children: [
-                                                                                              Align(
-                                                                                                alignment: AlignmentDirectional(-0.8, 0.05),
-                                                                                                child: Text(
-                                                                                                  'IPP : 753675809807',
-                                                                                                  style: FlutterFlowTheme.of(context).bodyText1.override(
-                                                                                                        fontFamily: 'Poppins',
-                                                                                                        color: FlutterFlowTheme.of(context).primaryBtnText,
-                                                                                                      ),
-                                                                                                ),
-                                                                                              ),
-                                                                                              Align(
-                                                                                                alignment: AlignmentDirectional(0.8, 0),
-                                                                                                child: Container(
-                                                                                                  width: MediaQuery.of(context).size.width * 0.1,
-                                                                                                  height: MediaQuery.of(context).size.width * 0.1,
-                                                                                                  decoration: BoxDecoration(
-                                                                                                    color: Color(0xFF2E7D32),
-                                                                                                    shape: BoxShape.circle,
-                                                                                                  ),
-                                                                                                  child: Padding(
-                                                                                                    padding: EdgeInsetsDirectional.fromSTEB(10, 9, 10, 10),
-                                                                                                    child: Text(
-                                                                                                      '99%',
-                                                                                                      textAlign: TextAlign.center,
-                                                                                                      style: FlutterFlowTheme.of(context).bodyText1,
-                                                                                                    ),
-                                                                                                  ),
-                                                                                                ),
-                                                                                              ),
-                                                                                              Align(
-                                                                                                alignment: AlignmentDirectional(0.3, 0),
-                                                                                                child: FFButtonWidget(
-                                                                                                  onPressed: () async {
-                                                                                                    await Navigator.push(
-                                                                                                      context,
-                                                                                                      MaterialPageRoute(
-                                                                                                        builder: (context) => ResultWidget(),
-                                                                                                      ),
-                                                                                                    );
-                                                                                                  },
-                                                                                                  text: 'Détails',
-                                                                                                  options: FFButtonOptions(
-                                                                                                    width: 100,
-                                                                                                    height: 20,
-                                                                                                    color: Color(0xFF4B39EF),
-                                                                                                    textStyle: FlutterFlowTheme.of(context).bodyText1.override(
-                                                                                                          fontFamily: 'Lexend Deca',
-                                                                                                          color: Colors.white,
-                                                                                                          fontSize: 14,
-                                                                                                          fontWeight: FontWeight.normal,
-                                                                                                        ),
-                                                                                                    elevation: 2,
-                                                                                                    borderSide: BorderSide(
-                                                                                                      color: Colors.transparent,
-                                                                                                      width: 1,
-                                                                                                    ),
-                                                                                                    borderRadius: 40,
-                                                                                                  ),
-                                                                                                ),
-                                                                                              ),
-                                                                                            ],
-                                                                                          ),
-                                                                                        ),
-                                                                                      ),
-                                                                                    ),
-                                                                                    Align(
-                                                                                      alignment: AlignmentDirectional(0, -0.2),
-                                                                                      child: Container(
-                                                                                        width: MediaQuery.of(context).size.width * 0.9,
-                                                                                        height: MediaQuery.of(context).size.height * 0.08,
-                                                                                        decoration: BoxDecoration(
-                                                                                          color: Color(0xFF311B92),
-                                                                                          borderRadius: BorderRadius.circular(40),
-                                                                                        ),
-                                                                                        child: Align(
-                                                                                          alignment: AlignmentDirectional(0, 0),
-                                                                                          child: Stack(
-                                                                                            children: [
-                                                                                              Align(
-                                                                                                alignment: AlignmentDirectional(-0.8, 0.05),
-                                                                                                child: Text(
-                                                                                                  'IPP : 67685809807',
-                                                                                                  style: FlutterFlowTheme.of(context).bodyText1.override(
-                                                                                                        fontFamily: 'Poppins',
-                                                                                                        color: FlutterFlowTheme.of(context).primaryBtnText,
-                                                                                                      ),
-                                                                                                ),
-                                                                                              ),
-                                                                                              Align(
-                                                                                                alignment: AlignmentDirectional(0.8, 0),
-                                                                                                child: Container(
-                                                                                                  width: MediaQuery.of(context).size.width * 0.1,
-                                                                                                  height: MediaQuery.of(context).size.width * 0.1,
-                                                                                                  decoration: BoxDecoration(
-                                                                                                    color: Color(0xFFF9A825),
-                                                                                                    shape: BoxShape.circle,
-                                                                                                  ),
-                                                                                                  child: Padding(
-                                                                                                    padding: EdgeInsetsDirectional.fromSTEB(10, 9, 10, 10),
-                                                                                                    child: Text(
-                                                                                                      '81',
-                                                                                                      textAlign: TextAlign.center,
-                                                                                                      style: FlutterFlowTheme.of(context).bodyText1,
-                                                                                                    ),
-                                                                                                  ),
-                                                                                                ),
-                                                                                              ),
-                                                                                              Align(
-                                                                                                alignment: AlignmentDirectional(0.3, 0),
-                                                                                                child: FFButtonWidget(
-                                                                                                  onPressed: () async {
-                                                                                                    await Navigator.push(
-                                                                                                      context,
-                                                                                                      MaterialPageRoute(
-                                                                                                        builder: (context) => ResultWidget(),
-                                                                                                      ),
-                                                                                                    );
-                                                                                                  },
-                                                                                                  text: 'Détails',
-                                                                                                  options: FFButtonOptions(
-                                                                                                    width: 100,
-                                                                                                    height: 20,
-                                                                                                    color: Color(0xFF4B39EF),
-                                                                                                    textStyle: FlutterFlowTheme.of(context).bodyText1.override(
-                                                                                                          fontFamily: 'Lexend Deca',
-                                                                                                          color: Colors.white,
-                                                                                                          fontSize: 14,
-                                                                                                          fontWeight: FontWeight.normal,
-                                                                                                        ),
-                                                                                                    elevation: 2,
-                                                                                                    borderSide: BorderSide(
-                                                                                                      color: Colors.transparent,
-                                                                                                      width: 1,
-                                                                                                    ),
-                                                                                                    borderRadius: 40,
-                                                                                                  ),
-                                                                                                ),
-                                                                                              ),
-                                                                                            ],
-                                                                                          ),
-                                                                                        ),
-                                                                                      ),
-                                                                                    ),
-                                                                                  ],
-                                                                                ),
-                                                                              ),
-                                                                            ),
-                                                                          ),
-                                                                          Align(
-                                                                            alignment:
-                                                                                AlignmentDirectional(0, 0.44),
-                                                                            child:
-                                                                                Container(
-                                                                              width: MediaQuery.of(context).size.width * 0.9,
-                                                                              height: MediaQuery.of(context).size.height * 0.08,
-                                                                              decoration: BoxDecoration(
-                                                                                color: Color(0xFF311B92),
-                                                                                borderRadius: BorderRadius.circular(40),
-                                                                              ),
-                                                                              child: Align(
-                                                                                alignment: AlignmentDirectional(0, 0),
-                                                                                child: Stack(
-                                                                                  children: [
-                                                                                    Align(
-                                                                                      alignment: AlignmentDirectional(-0.8, 0.05),
-                                                                                      child: Text(
-                                                                                        'IPP : 145378809807',
-                                                                                        style: FlutterFlowTheme.of(context).bodyText1.override(
-                                                                                              fontFamily: 'Poppins',
-                                                                                              color: FlutterFlowTheme.of(context).primaryBtnText,
-                                                                                            ),
-                                                                                      ),
-                                                                                    ),
-                                                                                    Align(
-                                                                                      alignment: AlignmentDirectional(0.8, 0),
-                                                                                      child: Container(
-                                                                                        width: MediaQuery.of(context).size.width * 0.1,
-                                                                                        height: MediaQuery.of(context).size.width * 0.1,
-                                                                                        decoration: BoxDecoration(
-                                                                                          color: Color(0xFFFFEE58),
-                                                                                          shape: BoxShape.circle,
-                                                                                        ),
-                                                                                        child: Padding(
-                                                                                          padding: EdgeInsetsDirectional.fromSTEB(10, 9, 10, 10),
-                                                                                          child: Text(
-                                                                                            '77%',
-                                                                                            textAlign: TextAlign.center,
-                                                                                            style: FlutterFlowTheme.of(context).bodyText1,
-                                                                                          ),
-                                                                                        ),
-                                                                                      ),
-                                                                                    ),
-                                                                                    Align(
-                                                                                      alignment: AlignmentDirectional(0.3, 0),
-                                                                                      child: FFButtonWidget(
-                                                                                        onPressed: () async {
-                                                                                          await Navigator.push(
-                                                                                            context,
-                                                                                            MaterialPageRoute(
-                                                                                              builder: (context) => ResultWidget(),
-                                                                                            ),
-                                                                                          );
-                                                                                        },
-                                                                                        text: 'Détails',
-                                                                                        options: FFButtonOptions(
-                                                                                          width: 100,
-                                                                                          height: 20,
-                                                                                          color: Color(0xFF4B39EF),
-                                                                                          textStyle: FlutterFlowTheme.of(context).bodyText1.override(
-                                                                                                fontFamily: 'Lexend Deca',
-                                                                                                color: Colors.white,
-                                                                                                fontSize: 14,
-                                                                                                fontWeight: FontWeight.normal,
-                                                                                              ),
-                                                                                          elevation: 2,
-                                                                                          borderSide: BorderSide(
-                                                                                            color: Colors.transparent,
-                                                                                            width: 1,
-                                                                                          ),
-                                                                                          borderRadius: 40,
-                                                                                        ),
-                                                                                      ),
-                                                                                    ),
-                                                                                  ],
-                                                                                ),
-                                                                              ),
-                                                                            ),
-                                                                          ),
-                                                                        ],
-                                                                      ),
-                                                                    ),
-                                                                  ],
-                                                                ),
-                                                              ],
-                                                            ),
-                                                            Align(
-                                                              alignment:
-                                                                  AlignmentDirectional(
-                                                                      0.3,
-                                                                      -0.4),
-                                                              child:
-                                                                  FFButtonWidget(
-                                                                onPressed:
-                                                                    () async {
-                                                                  await Navigator
-                                                                      .push(
-                                                                    context,
-                                                                    MaterialPageRoute(
-                                                                      builder:
-                                                                          (context) =>
-                                                                              ResultWidget(),
-                                                                    ),
-                                                                  );
-                                                                },
-                                                                text: 'Détails',
-                                                                options:
-                                                                    FFButtonOptions(
-                                                                  width: 100,
-                                                                  height: 20,
-                                                                  color: Color(
-                                                                      0xFF4B39EF),
-                                                                  textStyle: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyText1
-                                                                      .override(
-                                                                        fontFamily:
-                                                                            'Lexend Deca',
-                                                                        color: Colors
-                                                                            .white,
-                                                                        fontSize:
-                                                                            14,
-                                                                        fontWeight:
-                                                                            FontWeight.normal,
-                                                                      ),
-                                                                  elevation: 2,
-                                                                  borderSide:
-                                                                      BorderSide(
-                                                                    color: Colors
-                                                                        .transparent,
-                                                                    width: 1,
-                                                                  ),
-                                                                  borderRadius:
-                                                                      40,
-                                                                ),
-                                                              ),
-                                                            ),
-                                                          ],
-                                                        ),
-                                                      ],
-                                                    ),
-                                                  ],
-                                                ),
-                                              ],
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                  Align(
-                                    alignment:
-                                        AlignmentDirectional(0.85, -0.75),
-                                    child: FFButtonWidget(
-                                      onPressed: () {
-                                        print('Button pressed ...');
-                                      },
-                                      text: 'Modifier',
-                                      options: FFButtonOptions(
-                                        width: 100,
-                                        height: 50,
-                                        color: FlutterFlowTheme.of(context)
-                                            .primaryBtnText,
-                                        textStyle: FlutterFlowTheme.of(context)
-                                            .bodyText1
-                                            .override(
-                                              fontFamily: 'Lexend Deca',
-                                              color: Color(0xFF0A094E),
-                                              fontSize: 14,
-                                              fontWeight: FontWeight.normal,
-                                            ),
-                                        elevation: 2,
-                                        borderSide: BorderSide(
-                                          color: Colors.transparent,
-                                          width: 1,
-                                        ),
-                                        borderRadius: 40,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ],
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+                    child: Text(
+                      'Identifiez-vous :',
+                      style: FlutterFlowTheme.of(context).bodyText1.override(
+                            fontFamily: 'Poppins',
+                            color: Color(0xFF222222),
+                            fontSize: 22,
                           ),
-                          Align(
-                            alignment: AlignmentDirectional(0.3, -0.35),
-                            child: FFButtonWidget(
-                              onPressed: () async {
-                                await Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => ResultWidget(),
-                                  ),
-                                );
-                              },
-                              text: 'Détails',
-                              options: FFButtonOptions(
-                                width: 100,
-                                height: 20,
-                                color: Color(0xFF4B39EF),
-                                textStyle: FlutterFlowTheme.of(context)
-                                    .bodyText1
-                                    .override(
-                                      fontFamily: 'Lexend Deca',
-                                      color: Colors.white,
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.normal,
-                                    ),
-                                elevation: 2,
-                                borderSide: BorderSide(
-                                  color: Colors.transparent,
-                                  width: 1,
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(24, 12, 24, 12),
+                    child: TextFormField(
+                      controller: textController1,
+                      obscureText: false,
+                      decoration: InputDecoration(
+                        labelText: 'Identifiant',
+                        labelStyle:
+                            FlutterFlowTheme.of(context).bodyText1.override(
+                                  fontFamily: 'Poppins',
+                                  color: Color(0xFFE7E3E5),
                                 ),
-                                borderRadius: 40,
-                              ),
-                            ),
+                        hintText: 'Identifiant',
+                        hintStyle:
+                            FlutterFlowTheme.of(context).bodyText1.override(
+                                  fontFamily: 'Poppins',
+                                  color: Color(0xFFE7E3E5),
+                                ),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Color(0xFF222222),
+                            width: 1,
                           ),
-                        ],
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Color(0xFF222222),
+                            width: 1,
+                          ),
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        filled: true,
+                        fillColor: Color(0xFFFAFAFA),
                       ),
-                    ],
+                      style: FlutterFlowTheme.of(context).bodyText1.override(
+                            fontFamily: 'Poppins',
+                            color: Color(0xFF222222),
+                          ),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(24, 12, 24, 24),
+                    child: TextFormField(
+                      controller: textController2,
+                      obscureText: !passwordVisibility,
+                      decoration: InputDecoration(
+                        labelText: 'Mot de passe',
+                        labelStyle:
+                            FlutterFlowTheme.of(context).bodyText1.override(
+                                  fontFamily: 'Poppins',
+                                  color: Color(0xFFE7E3E5),
+                                ),
+                        hintText: 'Mot de passe',
+                        hintStyle:
+                            FlutterFlowTheme.of(context).bodyText1.override(
+                                  fontFamily: 'Poppins',
+                                  color: Color(0xFFE7E3E5),
+                                ),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Color(0xFF222222),
+                            width: 1,
+                          ),
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Color(0xFF222222),
+                            width: 1,
+                          ),
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        filled: true,
+                        fillColor: Color(0xFFFAFAFA),
+                        suffixIcon: InkWell(
+                          onTap: () => setState(
+                            () => passwordVisibility = !passwordVisibility,
+                          ),
+                          child: Icon(
+                            passwordVisibility
+                                ? Icons.visibility_outlined
+                                : Icons.visibility_off_outlined,
+                            color: Color(0xFF757575),
+                            size: 22,
+                          ),
+                        ),
+                      ),
+                      style: FlutterFlowTheme.of(context).bodyText1.override(
+                            fontFamily: 'Poppins',
+                            color: Color(0xFF222222),
+                          ),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 30),
+                    child: FFButtonWidget(
+                      onPressed: () async {
+                        if (textController1.text != null &&
+                            textController1.text != '') {
+                          if (textController2.text != null &&
+                              textController2.text != '') {
+                            await Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => DashBoardWidget(),
+                              ),
+                            );
+                          }
+                        }
+                      },
+                      text: 'Connexion',
+                      options: FFButtonOptions(
+                        width: 130,
+                        height: 40,
+                        color: Color(0xFF0A094E),
+                        textStyle:
+                            FlutterFlowTheme.of(context).subtitle2.override(
+                                  fontFamily: 'Poppins',
+                                  color: Colors.white,
+                                ),
+                        borderSide: BorderSide(
+                          color: Colors.transparent,
+                          width: 1,
+                        ),
+                        borderRadius: 12,
+                      ),
+                    ),
                   ),
                 ],
               ),
-              Align(
-                alignment: AlignmentDirectional(0, 0.8),
-                child: FFButtonWidget(
-                  onPressed: () {
-                    print('Button pressed ...');
-                  },
-                  text: 'Activer l\'alerte',
-                  options: FFButtonOptions(
-                    width: 150,
-                    height: 50,
-                    color: Color(0xFFE5090F),
-                    textStyle: FlutterFlowTheme.of(context).bodyText1.override(
-                          fontFamily: 'Lexend Deca',
-                          color: Colors.white,
-                          fontSize: 14,
-                          fontWeight: FontWeight.normal,
-                        ),
-                    elevation: 2,
-                    borderSide: BorderSide(
-                      color: Colors.transparent,
-                      width: 1,
-                    ),
-                    borderRadius: 40,
-                  ),
-                ),
-              ),
-            ],
+            ),
           ),
         ),
       ),

@@ -1,6 +1,6 @@
 {
-    "name": "ScreenMePatientsEligibles",
-    "short_name": "ScreenMePatientsEligibles",
+    "name": "ScreenME",
+    "short_name": "ScreenME",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
