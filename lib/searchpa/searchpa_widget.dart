@@ -483,7 +483,7 @@ class _SearchpaWidgetState extends State<SearchpaWidget> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 25, 0, 0),
+                          padding: EdgeInsetsDirectional.fromSTEB(0, 25, 0, 25),
                           child: Container(
                             width: MediaQuery.of(context).size.width * 0.8,
                             height: MediaQuery.of(context).size.height * 0.08,
@@ -497,7 +497,7 @@ class _SearchpaWidgetState extends State<SearchpaWidget> {
                               children: [
                                 Container(
                                   width:
-                                      MediaQuery.of(context).size.width * 0.5,
+                                      MediaQuery.of(context).size.width * 0.55,
                                   decoration: BoxDecoration(
                                     color: Color(0xFFE83818),
                                     borderRadius: BorderRadius.circular(30),
@@ -538,7 +538,8 @@ class _SearchpaWidgetState extends State<SearchpaWidget> {
                                   ),
                                 ),
                                 Container(
-                                  width: 100,
+                                  width:
+                                      MediaQuery.of(context).size.width * 0.2,
                                   height: 100,
                                   decoration: BoxDecoration(
                                     color: Color(0xFFBDBDBD),

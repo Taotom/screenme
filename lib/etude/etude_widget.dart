@@ -1,6 +1,7 @@
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../searchpa/searchpa_widget.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
@@ -116,13 +117,14 @@ class _EtudeWidgetState extends State<EtudeWidget> {
                               child: Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     10, 10, 10, 10),
-                                child: Text(
+                                child: AutoSizeText(
                                   'Les jus de fruits ne fournissent pas seulement des sucres et des calories connexes, mais ils sont de riches sources de composés bioactifs, en particulier de flavonoïdes. Les flavanones constituent une classe de flavonoïdes que l’on trouve spécifiquement et abondamment dans les agrumes, l’hespéridine étant le composé majeur de l’orange. D’après des études de cohorte prospectives, des apports plus élevés de flavanones sont associés à une incidence plus faible de mortalité par maladie cardiovasculaire (MCV).',
                                   textAlign: TextAlign.justify,
                                   style: FlutterFlowTheme.of(context)
                                       .bodyText1
                                       .override(
                                         fontFamily: 'Poppins',
+                                        color: Color(0xFF222222),
                                         fontSize: 10,
                                       ),
                                 ),
@@ -637,7 +639,7 @@ class _EtudeWidgetState extends State<EtudeWidget> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 25, 0, 0),
+                          padding: EdgeInsetsDirectional.fromSTEB(0, 25, 0, 25),
                           child: InkWell(
                             onTap: () async {
                               await Navigator.push(
